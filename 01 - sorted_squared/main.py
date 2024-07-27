@@ -3,23 +3,42 @@ import unittest
 # Method 1
 # def sorted_squared(array):
 #     return sorted([x**2 for x in array])
+# ----------------------------------------------
+# -> Space Complexity: O(n); 
+# -> Time complexity O(nlogn)
 
 # Method 2
 
-def sorted_squared(array):
-    i = 0
-    j = len(array) - 1
-    result = [0]*len(array)
-    for k in reversed(range(len(array))):
-        sq_i = array[i]**2
-        sq_j = array[j]**2
-        if sq_i > sq_j:
-            result[k] = sq_i
-            i += 1
-        else:
-            result[k] = sq_j
-            j -= 1
-    return result
+# def sorted_squared(array):
+#     i = 0
+#     j = len(array) - 1
+#     result = [0]*len(array)
+#     for k in reversed(range(len(array))):
+#         sq_i = array[i]**2
+#         sq_j = array[j]**2
+#         if sq_i > sq_j:
+#             result[k] = sq_i
+#             i += 1
+#         else:
+#             result[k] = sq_j
+#             j -= 1
+#     return result
+# - Space complexity: O(n)
+# - Time complexity: O(n)
+# ----------------------------------------------
+
+# Method 3
+# def sorted_squared(array):
+#     arrLen = len(array)
+#     result = [0] * arrLen
+    
+#     for i in range(arrLen):
+#         result[i] = array[i]**2
+#     result.sort()
+#     return result
+# - Space complexity: 0(n)
+# - Time complexity: O(n)
+# ----------------------------------------------
 
 # TEST CASES
 class TestSquareAndSort(unittest.TestCase):
