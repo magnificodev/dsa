@@ -1,8 +1,8 @@
 import unittest
 
 # Method 1
-# def sorted_squared(array):
-#     return sorted([x**2 for x in array])
+def sorted_squared(array):
+    return sorted([x**2 for x in array])
 # ----------------------------------------------
 # -> Space Complexity: O(n); 
 # -> Time complexity O(nlogn)
